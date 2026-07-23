@@ -35,6 +35,6 @@ module "virtual_machine" {
   source = "../../modules/azurerm_virtual_machine"
   vms = var.vms
 
-  depends_on = [module.resouce_group, module.network_interface]
+  depends_on = [module.resource_group, module.network_interface]
 
 }
