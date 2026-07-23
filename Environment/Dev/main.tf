@@ -24,13 +24,6 @@ module "public_ip" {
   depends_on = [module.resource_group]
 }
 
-# module "network_interface" {
-#   source = "../../modules/azurerm_virtual_machine"
-#   vms    = var.vms
-
-#   depends_on = [module.resource_group, module.subnets, module.public_ip]
-# }
-
 module "virtual_machine" {
   source = "../../modules/azurerm_virtual_machine"
   vms    = var.vms
